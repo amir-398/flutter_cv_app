@@ -5,62 +5,58 @@ class ProfilScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-        padding: const EdgeInsets.all(30),
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              const Text('List'),
-              SizedBox(
-                  height: 200,
-                  child: ListView(children: const [
-                    ListTile(
-                      leading: Icon(Icons.home),
-                      title: Text('Item 1'),
-                      subtitle: Text('Subtitle 1'),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.mail_outline),
-                      title: Text('Item 1'),
-                      subtitle: Text('Subtitle 1'),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.phone),
-                      title: Text('+33 1 02 03 04 05'),
-                      subtitle: Text('Subtitle 1'),
-                    )
-                  ])),
-              SizedBox(
-                  height: 200,
-                  child: ListView(scrollDirection: Axis.horizontal, children: [
-                    listImage('assets/img_1.jpg'),
-                    listImage('assets/img_2.jpg'),
-                    listImage('assets/img_3.jpg'),
-                    listImage('assets/img_4.jpg'),
-                    listImage('assets/img_5.jpg'),
-                    listImage('assets/img_4.jpg'),
-                  ])),
-              SizedBox(
-                  height: 800,
-                  child: GridView.count(crossAxisCount: 2, children: [
-                    listImage('assets/img_1.jpg'),
-                    listImage('assets/img_2.jpg'),
-                    listImage('assets/img_3.jpg'),
-                    listImage('assets/img_4.jpg'),
-                    listImage('assets/img_5.jpg'),
-                    listImage('assets/img_4.jpg'),
-                  ])),
-              const Wrap(spacing: 5, children: [
-                Chip(label: Text("Bruxelles")),
-                Chip(label: Text("Bruxelles")),
-                Chip(label: Text("Bruxelles")),
-                Chip(label: Text("Bruxelles")),
-                Chip(label: Text("Bruxelles")),
-              ])
-            ]));
-  }
-
-  Container listImage(String source) {
-    return Container(
-        margin: const EdgeInsets.only(right: 10), child: Image.asset(source));
+          Container(
+            color: const Color.fromARGB(149, 219, 152, 148),
+            height: 250, // Modifié pour avoir assez d'espace pour l'image
+            width: double.infinity,
+            child: Column(
+              // Changé à Column pour une meilleure structuration des widgets
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                const Text(
+                  'Amir Meberbeche',
+                  style: TextStyle(
+                    fontSize: 30,
+                    color: Color.fromARGB(255, 0, 0, 0),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(
+                  height: 20, // Réduit l'espace entre le texte et l'image
+                ),
+                ClipOval(
+                  child: Image.asset(
+                    'images/amir.webp', // Assurez-vous que le chemin est correct
+                    height: 100, // Ajustez la taille selon vos besoins
+                    width: 100,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: <Widget>[
+                    IconButton(onPressed: () => {}, icon: Icon(Icons.twitter)),
+                    IconButton(onPressed: () => {}, icon: Icon(Icons.facebook)),
+                    IconButton(onPressed: () => {}, icon: Icon(Icons.facebook)),
+                  ],
+                )
+              ],
+            ),
+          ),
+          SizedBox(
+              height: 200,
+              child: ListView(children: const [
+                ListTile(
+                  leading: Icon(Icons.phone),
+                  title: Text('+33 1 02 03 04 05'),
+                  subtitle: Text('Subtitle 1'),
+                )
+              ])),
+        ]));
   }
 }

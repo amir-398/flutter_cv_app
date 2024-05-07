@@ -16,7 +16,7 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Poppins',
         brightness: Brightness.dark,
-        scaffoldBackgroundColor: const Color.fromARGB(255, 221, 149, 149),
+        scaffoldBackgroundColor: Color.fromARGB(255, 14, 3, 59),
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),

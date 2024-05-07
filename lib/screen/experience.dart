@@ -9,7 +9,6 @@ class ExperienceScreen extends StatelessWidget {
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              const Text('List'),
               SizedBox(
                   height: 200,
                   child: ListView(children: const [

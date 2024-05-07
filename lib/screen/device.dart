@@ -1,6 +1,7 @@
 // screen/device.dart
 //
 
+import 'package:cv/screen/competence.dart';
 import 'package:flutter/material.dart';
 
 import 'experience.dart';
@@ -19,6 +20,7 @@ class _DeviceScreenState extends State<DeviceScreen> {
     ProfilScreen(),
     ExperienceScreen(),
     FormationScreen(),
+    CompetenceScreen(),
     InfoScreen()
   ];
 
@@ -45,17 +47,22 @@ class _DeviceScreenState extends State<DeviceScreen> {
                 icon: Icon(
                   Icons.list,
                 ),
-                label: 'List'),
+                label: 'Experience'),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.account_tree,
                 ),
-                label: 'BXL'),
+                label: 'Formation'),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.access_alarm,
                 ),
-                label: 'Truc'),
+                label: 'Compétence'),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.access_alarm,
+                ),
+                label: 'Infos'),
           ]),
     );
   }
