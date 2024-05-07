@@ -14,8 +14,8 @@ class ExperienceScreen extends StatelessWidget {
                   child: ListView(children: const [
                     ListTile(
                       leading: Icon(Icons.home),
-                      title: Text('Item 1'),
-                      subtitle: Text('Subtitle 1'),
+                      title: Text('Data.gouv.fr'),
+                      subtitle: Text('Data.analyst (2021) - Paris'),
                     ),
                     ListTile(
                       leading: Icon(Icons.mail_outline),
@@ -28,33 +28,6 @@ class ExperienceScreen extends StatelessWidget {
                       subtitle: Text('Subtitle 1'),
                     )
                   ])),
-              SizedBox(
-                  height: 200,
-                  child: ListView(scrollDirection: Axis.horizontal, children: [
-                    listImage('assets/img_1.jpg'),
-                    listImage('assets/img_2.jpg'),
-                    listImage('assets/img_3.jpg'),
-                    listImage('assets/img_4.jpg'),
-                    listImage('assets/img_5.jpg'),
-                    listImage('assets/img_4.jpg'),
-                  ])),
-              SizedBox(
-                  height: 800,
-                  child: GridView.count(crossAxisCount: 2, children: [
-                    listImage('assets/img_1.jpg'),
-                    listImage('assets/img_2.jpg'),
-                    listImage('assets/img_3.jpg'),
-                    listImage('assets/img_4.jpg'),
-                    listImage('assets/img_5.jpg'),
-                    listImage('assets/img_4.jpg'),
-                  ])),
-              const Wrap(spacing: 5, children: [
-                Chip(label: Text("Bruxelles")),
-                Chip(label: Text("Bruxelles")),
-                Chip(label: Text("Bruxelles")),
-                Chip(label: Text("Bruxelles")),
-                Chip(label: Text("Bruxelles")),
-              ])
             ]));
   }
 
