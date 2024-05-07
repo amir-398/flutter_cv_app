@@ -39,24 +39,51 @@ class ProfilScreen extends StatelessWidget {
                   height: 20,
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    IconButton(onPressed: () => {}, icon: Icon(Icons.twitter)),
-                    IconButton(onPressed: () => {}, icon: Icon(Icons.facebook)),
-                    IconButton(onPressed: () => {}, icon: Icon(Icons.facebook)),
+                    IconButton(
+                        onPressed: () => {}, icon: const Icon(Icons.facebook)),
+                    IconButton(
+                        onPressed: () => {}, icon: const Icon(Icons.facebook)),
+                    IconButton(
+                        onPressed: () => {}, icon: const Icon(Icons.facebook)),
                   ],
                 )
               ],
             ),
           ),
-          SizedBox(
-              height: 200,
-              child: ListView(children: const [
-                ListTile(
-                  leading: Icon(Icons.phone),
-                  title: Text('+33 1 02 03 04 05'),
-                  subtitle: Text('Subtitle 1'),
-                )
-              ])),
+          const Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                SizedBox(height: 20),
+                Row(children: [
+                  Icon(Icons.mail),
+                  Text('amir.398@hotmail.fr', style: TextStyle(fontSize: 20)),
+                ]),
+                SizedBox(height: 20),
+                Row(children: [
+                  Icon(Icons.phone),
+                  Text('0123456789'),
+                ]),
+                SizedBox(
+                    height:
+                        20), // Ajout d'un espace entre les lignes (facultatif
+                Row(children: [
+                  Icon(Icons.location_city),
+                  Text('56 moon space'),
+                ]),
+                SizedBox(height: 20),
+                Row(children: [
+                  Icon(Icons.home),
+                  Text('www.amirmeberbeche.com'),
+                ]),
+                SizedBox(height: 20),
+                Row(children: [
+                  Icon(Icons.usb_rounded),
+                  Text(
+                      'description de moi même: fan d\'espace et de technologie '),
+                ]),
+              ]),
         ]));
   }
 }
