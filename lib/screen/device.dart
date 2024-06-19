@@ -33,7 +33,7 @@ class _DeviceScreenState extends State<DeviceScreen> {
       body: _screenList[_currentScreen],
       bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          selectedItemColor: Colors.amber,
+          selectedItemColor: Colors.blue,
           unselectedItemColor: Colors.white,
           currentIndex: _currentScreen,
           onTap: onTabTapped,
