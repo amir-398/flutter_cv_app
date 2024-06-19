@@ -92,7 +92,8 @@ class CompetenceScreen extends StatelessWidget {
           const SizedBox(height: 4),
           Text(
             label,
-            style: const TextStyle(fontSize: 12),
+            style: const TextStyle(
+                fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),
             textAlign: TextAlign.center,
           ),
         ],
