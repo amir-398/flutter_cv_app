@@ -20,7 +20,7 @@ class MainApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Scaffold(
+      home: const Scaffold(
         body: Center(
           child: DeviceScreen(),
         ),

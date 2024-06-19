@@ -47,41 +47,77 @@ class ExperienceScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            children: [
-              Image.asset(
-                logoPath,
-                width: 50,
-                height: 50,
-              ),
-              const SizedBox(width: 10),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    company,
-                    style: const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
+          Container(
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+              boxShadow: const [
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: 10,
+                  offset: Offset(0, 5),
+                ),
+              ],
+            ),
+            child: Row(
+              children: [
+                Image.asset(
+                  logoPath,
+                  width: 50,
+                  height: 50,
+                ),
+                const SizedBox(width: 10),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      company,
+                      style: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
                     ),
-                  ),
-                  Text(
-                    title,
-                    style: const TextStyle(
-                      fontSize: 16,
-                      fontStyle: FontStyle.italic,
+                    Text(
+                      title,
+                      style: const TextStyle(
+                          fontSize: 16,
+                          fontStyle: FontStyle.italic,
+                          color: Colors.black),
                     ),
-                  ),
-                ],
-              ),
-            ],
+                  ],
+                ),
+              ],
+            ),
           ),
           const SizedBox(height: 10),
-          Text(description),
-          if (additionalInfo.isNotEmpty) ...[
-            const SizedBox(height: 5),
-            Text(additionalInfo),
-          ],
+          Container(
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+              boxShadow: const [
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: 10,
+                  offset: Offset(0, 5),
+                ),
+              ],
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(description,
+                    style: const TextStyle(fontSize: 16, color: Colors.black)),
+                if (additionalInfo.isNotEmpty) ...[
+                  const SizedBox(height: 5),
+                  Text(additionalInfo,
+                      style:
+                          const TextStyle(fontSize: 16, color: Colors.black)),
+                ],
+              ],
+            ),
+          ),
           const Divider(
             height: 30,
             thickness: 1,
