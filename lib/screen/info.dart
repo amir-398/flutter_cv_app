@@ -4,63 +4,62 @@ class InfoScreen extends StatelessWidget {
   const InfoScreen({super.key});
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-        padding: const EdgeInsets.all(30),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Infos +'),
+        backgroundColor: Colors.teal,
+      ),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(20),
         child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              const Text('List'),
-              SizedBox(
-                  height: 200,
-                  child: ListView(children: const [
-                    ListTile(
-                      leading: Icon(Icons.home),
-                      title: Text('Item 1'),
-                      subtitle: Text('Subtitle 1'),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.mail_outline),
-                      title: Text('Item 1'),
-                      subtitle: Text('Subtitle 1'),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.phone),
-                      title: Text('+33 1 02 03 04 05'),
-                      subtitle: Text('Subtitle 1'),
-                    )
-                  ])),
-              SizedBox(
-                  height: 200,
-                  child: ListView(scrollDirection: Axis.horizontal, children: [
-                    listImage('assets/img_1.jpg'),
-                    listImage('assets/img_2.jpg'),
-                    listImage('assets/img_3.jpg'),
-                    listImage('assets/img_4.jpg'),
-                    listImage('assets/img_5.jpg'),
-                    listImage('assets/img_4.jpg'),
-                  ])),
-              SizedBox(
-                  height: 800,
-                  child: GridView.count(crossAxisCount: 2, children: [
-                    listImage('assets/img_1.jpg'),
-                    listImage('assets/img_2.jpg'),
-                    listImage('assets/img_3.jpg'),
-                    listImage('assets/img_4.jpg'),
-                    listImage('assets/img_5.jpg'),
-                    listImage('assets/img_4.jpg'),
-                  ])),
-              const Wrap(spacing: 5, children: [
-                Chip(label: Text("Bruxelles")),
-                Chip(label: Text("Bruxelles")),
-                Chip(label: Text("Bruxelles")),
-                Chip(label: Text("Bruxelles")),
-                Chip(label: Text("Bruxelles")),
-              ])
-            ]));
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            infoItem(
+              'Fan de basket-ball',
+              'images/basket.jpg',
+              'J\'ai toujours été passionné par le basket-ball. J\'ai joué dans différentes équipes locales et je suis un fervent supporter de la NBA. J\'aime regarder les matchs et analyser les stratégies des différentes équipes.',
+            ),
+            const SizedBox(height: 20),
+            infoItem(
+              'Passionné de l\'astronomie',
+              'images/astronomie.jpg',
+              'L\'astronomie est une de mes passions depuis l\'enfance. J\'aime passer des nuits à observer les étoiles et les planètes avec mon télescope. Je suis également membre d\'un club d\'astronomie local où nous partageons nos observations et connaissances.',
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
-  Container listImage(String source) {
-    return Container(
-        margin: const EdgeInsets.only(right: 10), child: Image.asset(source));
+  Widget infoItem(String title, String imagePath, String description) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Image.asset(
+          imagePath,
+          width: double.infinity,
+          height: 200,
+          fit: BoxFit.cover,
+        ),
+        const SizedBox(height: 10),
+        Text(
+          title,
+          style: const TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const SizedBox(height: 10),
+        Text(
+          description,
+          style: const TextStyle(fontSize: 16),
+        ),
+        const Divider(
+          height: 30,
+          thickness: 1,
+          color: Colors.grey,
+        ),
+      ],
+    );
   }
 }

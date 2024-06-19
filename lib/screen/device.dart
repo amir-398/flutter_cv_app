@@ -10,7 +10,10 @@ import 'info.dart';
 import 'profil.dart';
 
 class DeviceScreen extends StatefulWidget {
+  const DeviceScreen({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _DeviceScreenState createState() => _DeviceScreenState();
 }
 
@@ -27,9 +30,6 @@ class _DeviceScreenState extends State<DeviceScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Rchnou'),
-      ),
       body: _screenList[_currentScreen],
       bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,

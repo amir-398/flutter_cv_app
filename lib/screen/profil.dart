@@ -4,86 +4,116 @@ class ProfilScreen extends StatelessWidget {
   const ProfilScreen({super.key});
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Profil'),
+        backgroundColor:
+            Colors.teal, // Changez la couleur de l'app bar si nécessaire
+      ),
+      body: SingleChildScrollView(
         child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-          Container(
-            color: const Color.fromARGB(149, 219, 152, 148),
-            height: 250, // Modifié pour avoir assez d'espace pour l'image
-            width: double.infinity,
-            child: Column(
-              // Changé à Column pour une meilleure structuration des widgets
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                const Text(
-                  'Amir Meberbeche',
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: Color.fromARGB(255, 0, 0, 0),
-                    fontWeight: FontWeight.bold,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Container(
+              color: Colors.tealAccent, // Une couleur plus douce pour l'en-tête
+              padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+              width: double.infinity,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  const Text(
+                    'Amir Meberbeche',
+                    style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-                const SizedBox(
-                  height: 20, // Réduit l'espace entre le texte et l'image
-                ),
-                ClipOval(
-                  child: Image.asset(
-                    'images/amir.webp', // Assurez-vous que le chemin est correct
-                    height: 100, // Ajustez la taille selon vos besoins
-                    width: 100,
-                    fit: BoxFit.cover,
+                  const SizedBox(height: 10),
+                  ClipOval(
+                    child: Image.asset(
+                      'images/amir.webp', // Assurez-vous que le chemin est correct
+                      height: 100,
+                      width: 100,
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    IconButton(
-                        onPressed: () => {}, icon: const Icon(Icons.facebook)),
-                    IconButton(
-                        onPressed: () => {}, icon: const Icon(Icons.facebook)),
-                    IconButton(
-                        onPressed: () => {}, icon: const Icon(Icons.facebook)),
-                  ],
-                )
-              ],
+                  const SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      IconButton(
+                          onPressed: () => {},
+                          icon: const Icon(Icons.facebook, color: Colors.blue)),
+                      IconButton(
+                          onPressed: () => {},
+                          icon: const Icon(Icons.facebook, color: Colors.blue)),
+                      IconButton(
+                          onPressed: () => {},
+                          icon: const Icon(Icons.facebook, color: Colors.blue)),
+                    ],
+                  )
+                ],
+              ),
             ),
-          ),
-          const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                SizedBox(height: 20),
-                Row(children: [
-                  Icon(Icons.mail),
-                  Text('amir.398@hotmail.fr', style: TextStyle(fontSize: 20)),
-                ]),
-                SizedBox(height: 20),
-                Row(children: [
-                  Icon(Icons.phone),
-                  Text('0123456789'),
-                ]),
-                SizedBox(
-                    height:
-                        20), // Ajout d'un espace entre les lignes (facultatif
-                Row(children: [
-                  Icon(Icons.location_city),
-                  Text('56 moon space'),
-                ]),
-                SizedBox(height: 20),
-                Row(children: [
-                  Icon(Icons.home),
-                  Text('www.amirmeberbeche.com'),
-                ]),
-                SizedBox(height: 20),
-                Row(children: [
-                  Icon(Icons.usb_rounded),
-                  Text(
-                      'description de moi même: fan d\'espace et de technologie '),
-                ]),
-              ]),
-        ]));
+            const Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  SizedBox(height: 20),
+                  Row(
+                    children: [
+                      Icon(Icons.mail, color: Colors.teal),
+                      SizedBox(width: 10),
+                      Text('amir.398@hotmail.fr',
+                          style: TextStyle(fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    children: [
+                      Icon(Icons.phone, color: Colors.teal),
+                      SizedBox(width: 10),
+                      Text('0123456789', style: TextStyle(fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    children: [
+                      Icon(Icons.location_city, color: Colors.teal),
+                      SizedBox(width: 10),
+                      Text('56 moon space', style: TextStyle(fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    children: [
+                      Icon(Icons.home, color: Colors.teal),
+                      SizedBox(width: 10),
+                      Text('www.amirmeberbeche.com',
+                          style: TextStyle(fontSize: 18)),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    children: [
+                      Icon(Icons.info, color: Colors.teal),
+                      SizedBox(width: 10),
+                      Expanded(
+                        child: Text(
+                          'Développeur web, fan d\'astronomie et de basket-ball.',
+                          style: TextStyle(fontSize: 18),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
