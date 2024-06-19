@@ -54,7 +54,7 @@ class ProfilScreen extends StatelessWidget {
                       children: <Widget>[
                         GestureDetector(
                           onTap: () => _launchURL(
-                              'https://www.linkedin.com/in/amir-meberbeche-337968249/'),
+                              'https://www.linkedin.com/in/amir-meberbeche-337968249'),
                           child: Image.asset(
                             'images/linkedin.png', // Votre image pour LinkedIn
                             width: 40,
