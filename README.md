@@ -13,11 +13,11 @@ Ce projet Flutter présente une interface utilisateur détaillant le profil, les
 
 1. Clonez ce dépôt :
     ```bash
-    git clone https://github.com/votre-utilisateur/profil-experiences.git
+    git clone https://github.com/amir-398/flutter_cv_app.git
     ```
 2. Accédez au répertoire du projet :
     ```bash
-    cd profil-experiences
+    cd flutter_cv_app
     ```
 3. Installez les dépendances :
     ```bash
