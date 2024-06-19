@@ -4,10 +4,10 @@ Ce projet Flutter présente une interface utilisateur détaillant le profil, les
 
 ## Fonctionnalités
 
-- **Profil** : Affiche les informations de base du développeur, y compris le nom, la photo de profil et les liens vers les réseaux sociaux.
-- **Expériences Professionnelles** : Détaille les postes occupés par le développeur dans diverses entreprises avec des descriptions et des logos.
+- **Profil** : Affiche un récapitulatif, y compris le nom, la photo de profil et les liens vers mes réseaux sociaux.
+- **Expériences Professionnelles** : Détaille les postes occupés  dans diverses entreprises avec des descriptions et des logos.
 - **Formation** : Liste les établissements d'enseignement et les diplômes obtenus avec des logos et des descriptions.
-- **Informations Supplémentaires** : Présente des intérêts personnels tels que les sports pratiqués et les séjours à l'étranger.
+- **Informations Supplémentaires** : Présente mes intérêts personnels tels que mes hobbies ainsi que mes passions.
 
 ## Installation
 
